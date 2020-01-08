@@ -16,7 +16,7 @@ public class NotifikasiActivity extends AppCompatActivity {
     RecyclerView recy_notif;
     NotifikasiAdapter notifikasiAdapter;
     List<Notifikasi>arrayofnotif=new ArrayList<>();
-    SqliteHelper sqliteHelper;
+    SqliteHelper sqliteHelper;//
 
 
     @Override
