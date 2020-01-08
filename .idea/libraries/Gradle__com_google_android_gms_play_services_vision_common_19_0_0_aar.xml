@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.gms:play-services-vision-common:19.0.0@aar">
+    <CLASSES>
+      <root url="jar://E:/gradlecache/caches/transforms-2/files-2.1/a8482b2cc2d04f8bc2d161223d85bf94/jars/classes.jar!/" />
+      <root url="file://E:/gradlecache/caches/transforms-2/files-2.1/a8482b2cc2d04f8bc2d161223d85bf94/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/gradlecache/caches/modules-2/files-2.1/com.google.android.gms/play-services-vision-common/19.0.0/74e8d34d0be5caea9e39a942a8a6d00af3ab6f04/play-services-vision-common-19.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

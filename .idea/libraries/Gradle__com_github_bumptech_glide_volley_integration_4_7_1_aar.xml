@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.bumptech.glide:volley-integration:4.7.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c10d78aa5fdffb313df92c4fd28a97c0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c10d78aa5fdffb313df92c4fd28a97c0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/volley-integration/4.7.1/de0f5548767d0e8fd49360438f04c86e9c84d5f1/volley-integration-4.7.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/volley-integration/4.7.1/39e7678e24179045c24ecf2a26bc44491cbfe28/volley-integration-4.7.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

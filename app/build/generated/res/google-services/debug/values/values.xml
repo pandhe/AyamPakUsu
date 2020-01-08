@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firebase_database_url" translatable="false">https://ayampakusu-b0a7b.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">6595028824</string>
+    <string name="google_api_key" translatable="false">AIzaSyCCoRK4Nwj2MK4T7NmYeCtpzbtjjjMirFo</string>
+    <string name="google_app_id" translatable="false">1:6595028824:android:3e84f5e40b5bbad6</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCCoRK4Nwj2MK4T7NmYeCtpzbtjjjMirFo</string>
+    <string name="google_storage_bucket" translatable="false">ayampakusu-b0a7b.appspot.com</string>
+    <string name="project_id" translatable="false">ayampakusu-b0a7b</string>
+</resources>

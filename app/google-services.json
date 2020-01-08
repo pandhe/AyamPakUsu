@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "6595028824",
+    "firebase_url": "https://ayampakusu-b0a7b.firebaseio.com",
+    "project_id": "ayampakusu-b0a7b",
+    "storage_bucket": "ayampakusu-b0a7b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6595028824:android:3e84f5e40b5bbad6",
+        "android_client_info": {
+          "package_name": "com.pontianak.ayampakusu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6595028824-806dgpraojuumubvsrb9m290jc0gb1lb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pontianak.ayampakusu",
+            "certificate_hash": "babe86c01cacef1578921b01804ded2004db968b"
+          }
+        },
+        {
+          "client_id": "6595028824-qkf9ild1hnl6l0f56tt5g7n64ahebb22.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pontianak.ayampakusu",
+            "certificate_hash": "47ed57bf7c9dc2ba720e056e56bc8527f9c4c4fc"
+          }
+        },
+        {
+          "client_id": "6595028824-hdddi37tvi9dore9e2n73m11kt9iriin.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pontianak.ayampakusu",
+            "certificate_hash": "a62d077a2c96af461330fbc0903616bc6700518d"
+          }
+        },
+        {
+          "client_id": "6595028824-lg0rie3e0tktkv48lkm2eigunl7uku46.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pontianak.ayampakusu",
+            "certificate_hash": "6df97600f78c2ea40b64b47de83af1ba0e2e4cca"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCoRK4Nwj2MK4T7NmYeCtpzbtjjjMirFo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6595028824-erg9q93rkt9bk21tkohe27ipjobd8f8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
