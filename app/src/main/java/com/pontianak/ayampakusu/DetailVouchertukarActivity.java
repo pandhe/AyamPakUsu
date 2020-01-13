@@ -76,7 +76,7 @@ public class DetailVouchertukarActivity extends AppCompatActivity {
         gson=new GsonBuilder().create();
         helper=new Helper(this);
         final Intent intent=getIntent();
-        Currentpoin=helper.meisinteger(intent.getStringExtra("point"));
+        Currentpoin=helper.meisinteger(helper.prefs.getString("curr_point","0"));
         builder1.setPositiveButton("Lanjutkan", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked OK button
@@ -88,7 +88,7 @@ public class DetailVouchertukarActivity extends AppCompatActivity {
                     AlertDialog.Builder builder33 = new AlertDialog.Builder(DetailVouchertukarActivity.this);
 
 // 2. Chain together various setter methods to set the dialog characteristics
-                    builder33.setMessage("Total poin anda belum mencukupi untuk menukarkan voucher ini"+intent.getStringExtra("point"))
+                    builder33.setMessage("Total poin anda belum mencukupi untuk menukarkan voucher ini "+helper.prefs.getString("curr_point","0"))
                             .setTitle("Poin tidak cukup");
                     builder33.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         @Override

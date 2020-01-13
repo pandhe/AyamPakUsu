@@ -189,7 +189,9 @@ public class MainActivity extends AppCompatActivity implements UmkmAdapter.Adapt
         voucherTukarAdapter=new VoucherTukarAdapter(voucherTukars, this, new VoucherTukarAdapter.onSelect() {
             @Override
             public void onselectitem(int item) {
+
                 Intent intent=new Intent(MainActivity.this, DetailVouchertukarActivity.class);
+                Log.i("ez curr point ",curr_point);
                 intent.putExtra("point",curr_point);
 
                 intent.putExtra("item",voucherTukars.get(item));
@@ -281,10 +283,21 @@ public class MainActivity extends AppCompatActivity implements UmkmAdapter.Adapt
         bt_more_promo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent;
+                if (currentUser != null) {
 
-                Intent intent=new Intent(MainActivity.this,VoucherActivity.class);
-                intent.putExtra("s_item",1);
-                startActivity(intent);
+                    intent=new Intent(MainActivity.this,VoucherActivity.class);
+                    intent.putExtra("s_item",1);
+                    startActivity(intent);
+                }
+                else {
+                    intent = new Intent(MainActivity.this, SlideLoginActivity.class);
+                    //intent.putExtra("s_item", 4);
+                    startActivity(intent);
+
+                }
+
+
             }
         });
         bt_more_umkm.setOnClickListener(new View.OnClickListener() {
@@ -498,6 +511,7 @@ public class MainActivity extends AppCompatActivity implements UmkmAdapter.Adapt
 
                                 bt_point_cashback.setText(jsonObject.getString("point")+" Poin");
                                 curr_point=jsonObject.getString("point");
+                                helper.meditor.putString("curr_point", jsonObject.getString("point")).apply();
                                 txt_akun.setText(jsonObject.getString("nama_user"));
 
                                 if(jsonObject.getString("register").equals("0")){
