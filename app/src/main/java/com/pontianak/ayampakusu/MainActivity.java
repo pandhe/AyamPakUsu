@@ -374,6 +374,12 @@ public class MainActivity extends AppCompatActivity implements UmkmAdapter.Adapt
 
     }
 
+
+
+
+
+
+
     @Override
     public void onOpenItem(int position) {
         final Umkm makanan = arrayofumkm.get(position);
@@ -1154,6 +1160,7 @@ public class MainActivity extends AppCompatActivity implements UmkmAdapter.Adapt
 
         }
     }
+
 
 
 

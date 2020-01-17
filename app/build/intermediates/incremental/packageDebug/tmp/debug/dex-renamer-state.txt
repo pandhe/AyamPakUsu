@@ -1,4 +1,4 @@
-#Thu Jan 16 17:39:29 ICT 2020
+#Fri Jan 17 17:15:00 ICT 2020
 base.0=D\:\\proj\\AyamPakUsu\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 path.0=classes.dex
 renamed.0=classes.dex
