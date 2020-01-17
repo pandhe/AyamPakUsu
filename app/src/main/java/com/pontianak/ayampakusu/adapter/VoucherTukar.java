@@ -27,6 +27,8 @@ public class VoucherTukar implements  Parcelable {
     public String indexed_to_pelanggan;
     @SerializedName("status_voucher")
     public String status_voucher;
+    @SerializedName("deskripsi_voucher")
+    public String deskripsi_voucher;
 
     @Override
     public int describeContents() {
@@ -41,7 +43,7 @@ public class VoucherTukar implements  Parcelable {
         dest.writeString(this.datetime_mulai_berlaku_voucher);
         dest.writeString(this.datetime_stop_voucher);
         dest.writeString(this.image_voucher);
-        dest.writeString(this.image_voucher);
+        dest.writeString(this.deskripsi_voucher);
     }
 
 
@@ -58,6 +60,7 @@ public class VoucherTukar implements  Parcelable {
         this.datetime_mulai_berlaku_voucher = in.readString();
         this.datetime_stop_voucher=in.readString();
         this.image_voucher=in.readString();
+        this.deskripsi_voucher=in.readString();
     }
 
     public static final Parcelable.Creator<ParcelVoucherTukar> CREATOR = new Parcelable.Creator<ParcelVoucherTukar>() {

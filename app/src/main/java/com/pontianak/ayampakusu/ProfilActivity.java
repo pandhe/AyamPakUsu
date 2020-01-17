@@ -36,7 +36,7 @@ import java.util.Map;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ProfilActivity extends AppCompatActivity {
+public class ProfilActivity extends KuberlayarDilautan {
     private Helper helper;
     private Service_Connector service_connector;
     private Button bt_daftar,bt_daftar_google;
@@ -84,6 +84,7 @@ public class ProfilActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<GetTokenResult> task) {
                         if (task.isSuccessful()) {
+                            dialog_loading.show();
                             String idToken = task.getResult().getToken();
 
                             Map<String, String> params = new HashMap<String, String>();
@@ -95,11 +96,13 @@ public class ProfilActivity extends AppCompatActivity {
                             service_connector.sendpostrequest(ProfilActivity.this, "setprofil", params, new Service_Connector.VolleyResponseListener_v3() {
                                 @Override
                                 public void onError(String message) {
+                                    dialog_loading.hide();
 
                                 }
 
                                 @Override
                                 public void onResponese(String response) {
+                                    dialog_loading.hide();
                                     try{
                                         JSONObject respon=new JSONObject(response);
                                         if(respon.getString("status").equals("1")){
@@ -119,17 +122,18 @@ public class ProfilActivity extends AppCompatActivity {
 
                                 @Override
                                 public void onNoConnection(String message) {
+                                    dialog_loading.hide();
 
                                 }
 
                                 @Override
                                 public void OnServerError(String message) {
-
+                                    dialog_loading.hide();
                                 }
 
                                 @Override
                                 public void OnTimeOut() {
-
+                                    dialog_loading.hide();
                                 }
                             });
                         } else {
@@ -183,6 +187,7 @@ public class ProfilActivity extends AppCompatActivity {
         edt_tanggal_lahir.setText(sdf.format(myCalendar.getTime()));
     }
     private void getuser(){
+        dialog_loading.show();
         currentUser.getIdToken(true).addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
             @Override
             public void onComplete(@NonNull Task<GetTokenResult> task) {
@@ -195,11 +200,13 @@ public class ProfilActivity extends AppCompatActivity {
                     service_connector.sendpostrequest(ProfilActivity.this, "getprofil", params, new Service_Connector.VolleyResponseListener_v3() {
                         @Override
                         public void onError(String message) {
+                            dialog_loading.hide();
 
                         }
 
                         @Override
                         public void onResponese(String response) {
+                            dialog_loading.hide();
                             try{
                                 JSONObject respon=new JSONObject(response);
                                 if(respon.getString("status").equals("1")){
@@ -230,22 +237,26 @@ public class ProfilActivity extends AppCompatActivity {
 
                         @Override
                         public void onNoConnection(String message) {
+                            dialog_loading.hide();
 
                         }
 
                         @Override
                         public void OnServerError(String message) {
+                            dialog_loading.hide();
 
                         }
 
                         @Override
                         public void OnTimeOut() {
+                            dialog_loading.hide();
 
                         }
                     });
                 } else {
                     // Handle error -> task.getException();
                     Log.i("ez", task.getException().getMessage());
+                    dialog_loading.hide();
                 }
 
             }

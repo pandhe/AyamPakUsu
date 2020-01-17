@@ -12,6 +12,7 @@ public class ParcelVoucherTukar implements Parcelable {
    public String datetime_stop_voucher;
      public String image_voucher;
     public String status_voucher;
+    public String deskripsi_voucher;
 
     @Override
     public int describeContents() {
@@ -26,20 +27,21 @@ public class ParcelVoucherTukar implements Parcelable {
         dest.writeString(this.datetime_mulai_berlaku_voucher);
         dest.writeString(this.datetime_stop_voucher);
         dest.writeString(this.image_voucher);
-        dest.writeString(this.image_voucher);
+        dest.writeString(this.deskripsi_voucher);
     }
 
 
     public ParcelVoucherTukar() {
     }
 
-    public ParcelVoucherTukar(String id_voucher, String nama_voucher, String besaran_voucher, String datetime_mulai_berlaku_voucher, String datetime_stop_voucher, String image_voucher) {
+    public ParcelVoucherTukar(String id_voucher, String nama_voucher, String besaran_voucher, String datetime_mulai_berlaku_voucher, String datetime_stop_voucher, String image_voucher, String deskripsi_voucher) {
         this.id_voucher = id_voucher;
         this.nama_voucher = nama_voucher;
         this.besaran_voucher = besaran_voucher;
         this.datetime_mulai_berlaku_voucher = datetime_mulai_berlaku_voucher;
         this.datetime_stop_voucher = datetime_stop_voucher;
         this.image_voucher = image_voucher;
+        this.deskripsi_voucher=deskripsi_voucher;
     }
 
     // Perhatikan method yang dipanggil pada objek in
@@ -50,6 +52,7 @@ public class ParcelVoucherTukar implements Parcelable {
         this.datetime_mulai_berlaku_voucher = in.readString();
         this.datetime_stop_voucher=in.readString();
         this.image_voucher=in.readString();
+        this.deskripsi_voucher=in.readString();
     }
 
     public static final Parcelable.Creator<ParcelVoucherTukar> CREATOR = new Parcelable.Creator<ParcelVoucherTukar>() {

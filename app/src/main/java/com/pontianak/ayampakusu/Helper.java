@@ -42,6 +42,24 @@ public class Helper {
         return str;
     }
 
+    public String caritanggal(String time) {
+        String inputPattern = "yyyy-MM-dd HH:mm:ss";
+        String outputPattern = "dd-MMM-yyyy";
+        SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern);
+        SimpleDateFormat outputFormat = new SimpleDateFormat(outputPattern);
+
+        Date date = null;
+        String str = null;
+
+        try {
+            date = inputFormat.parse(time);
+            str = outputFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return str;
+    }
+
     public String cariwaktusimpel(String time) {
         String inputPattern = "yyyy-MM-dd HH:mm:ss";
         String outputPattern = "HH:mm";

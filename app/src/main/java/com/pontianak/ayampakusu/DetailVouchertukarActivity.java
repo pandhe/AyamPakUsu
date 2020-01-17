@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,7 +38,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailVouchertukarActivity extends AppCompatActivity {
     ImageView img_1;
-    TextView txt_1,txt_2;
+    TextView txt_1,txt_2,txt_3,txt_4;
     MyConfig myConfig;
     AlertDialog.Builder builder1;
     AlertDialog dialog1;
@@ -59,13 +60,17 @@ public class DetailVouchertukarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail_vouchertukar);
         voucherTukar=getIntent().getParcelableExtra("item");
         myConfig=new MyConfig();
+        helper=new Helper(this);
         service_connector=new Service_Connector();
         txt_1=findViewById(R.id.txt_1);
         txt_2=findViewById(R.id.txt_2);
+        txt_3=findViewById(R.id.txt_3);
+        txt_4=findViewById(R.id.txt_4);
         img_1=findViewById(R.id.img_1);
         txt_1.setText(voucherTukar.nama_voucher);
         gabung2 =getLayoutInflater();
-        txt_2.setText("Dapat ditukarkan dengan "+voucherTukar.besaran_voucher +" Poin");
+        txt_2.setText(voucherTukar.besaran_voucher +" Poin");
+        txt_3.setText("Berakhir pada : "+helper.caritanggal(voucherTukar.datetime_stop_voucher));
         Glide.with(this).load(myConfig.main_url + "images/voucher/" + voucherTukar.image_voucher).into(img_1);
         builder1 = new AlertDialog.Builder(this);
         // builder.setTitle("Transaksi Point");
@@ -74,9 +79,18 @@ public class DetailVouchertukarActivity extends AppCompatActivity {
         txt_id=mydialog.findViewById(R.id.txt_id_transaksi);
         txt_nominal=mydialog.findViewById(R.id.txt_nominal);
         gson=new GsonBuilder().create();
-        helper=new Helper(this);
+
         final Intent intent=getIntent();
         Currentpoin=helper.meisinteger(helper.prefs.getString("curr_point","0"));
+        txt_4.setText("Poin anda "+helper.prefs.getString("curr_point","0"));
+        WebView webView = findViewById(R.id.webview_1);
+
+        final String mimeType = "text/html";
+        final String encoding = "UTF-8";
+        String html = voucherTukar.deskripsi_voucher;
+
+
+        webView.loadDataWithBaseURL("", html, mimeType, encoding, "");
         builder1.setPositiveButton("Lanjutkan", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked OK button

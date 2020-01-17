@@ -9,5 +9,4 @@ static final int REQUEST_VOUCHER=1009;
     static final int REQUEST_CHANGE_PROFILE=1010;
     static final int REQUEST_NOTIFICATION=1011;
 
-
         }
