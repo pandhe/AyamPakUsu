@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements UmkmAdapter.Adapt
     Service_Connector service_connector;
     int REQUEST_PERMISSION=241;
     int REQUEST_QR_CODE=1007;
+    int REQUEST_CHANGE_PROFIL=1008;
     private PromoAdapter promoAdapter;
     private VoucherTukarAdapter voucherTukarAdapter;
     ImageButton bt_vocer_1,bt_vocer_2,bt_vocer_3,bt_more_promo,bt_more_umkm;
@@ -120,6 +121,7 @@ public class MainActivity extends AppCompatActivity implements UmkmAdapter.Adapt
     ImageButton bt_lonceng;
     TextView txt_logindulu;
     Gson gson;
+    boolean isregister=true;
 
     private View.OnClickListener klikvoucher=new View.OnClickListener() {
         @Override
@@ -519,10 +521,15 @@ public class MainActivity extends AppCompatActivity implements UmkmAdapter.Adapt
                                 curr_point=jsonObject.getString("point");
                                 helper.meditor.putString("curr_point", jsonObject.getString("point")).apply();
                                 txt_akun.setText(jsonObject.getString("nama_user"));
+                                isregister=true;
 
                                 if(jsonObject.getString("register").equals("0")){
+                                    isregister=false;
+                                    if(loadmenu){
+                                        getmenu();
+                                    }
                                    Intent intent=new Intent(MainActivity.this,ProfilActivity.class);
-                                   startActivity(intent);
+                                    startActivityForResult(intent,myConfig.REQUEST_CHANGE_PROFILE);
 
                                 }
                                 else{
@@ -1111,9 +1118,16 @@ public class MainActivity extends AppCompatActivity implements UmkmAdapter.Adapt
                             break;
                         case 1:
                             if (currentUser != null) {
+                                if(isregister){
+                                    intent = new Intent(MainActivity.this, QrCodeActivity.class);
+                                    startActivityForResult(intent, REQUEST_QR_CODE);
+                                }
+                                else{
+                                    intent=new Intent(MainActivity.this,ProfilActivity.class);
+                                    startActivityForResult(intent,myConfig.REQUEST_CHANGE_PROFILE);
+                                }
 
-                                intent = new Intent(MainActivity.this, QrCodeActivity.class);
-                                startActivityForResult(intent, REQUEST_QR_CODE);
+
                             }
                             else {
                                 intent = new Intent(MainActivity.this, SlideLoginActivity.class);
@@ -1160,6 +1174,7 @@ public class MainActivity extends AppCompatActivity implements UmkmAdapter.Adapt
 
         }
     }
+
 
 
 

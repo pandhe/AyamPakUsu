@@ -79,70 +79,20 @@ public class ProfilActivity extends KuberlayarDilautan {
         bt_daftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                boolean formvalid=true;
+                if(edt_nama.getText().toString().length()<5){
+                    formvalid=false;
+                    edt_nama.setError("Isian ini setidaknya harus berisi 5 karakter");
+                }
+                if(edt_no_telp.getText().toString().length()<5){
+                    formvalid=false;
+                    edt_nama.setError("Isian ini setidaknya harus berisi 5 karakter");
+                }
+                if(edt_tanggal_lahir.getText().toString().length()<5){
+                    formvalid=false;
+                }
 
-                currentUser.getIdToken(true).addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<GetTokenResult> task) {
-                        if (task.isSuccessful()) {
-                            dialog_loading.show();
-                            String idToken = task.getResult().getToken();
 
-                            Map<String, String> params = new HashMap<String, String>();
-                            params.put("idtoken", idToken);
-                            params.put("no_telp",edt_no_telp.getText().toString());
-                            params.put("tanggal_lahir",edt_tanggal_lahir.getText().toString());
-                            params.put("username",edt_username.getText().toString());
-
-                            service_connector.sendpostrequest(ProfilActivity.this, "setprofil", params, new Service_Connector.VolleyResponseListener_v3() {
-                                @Override
-                                public void onError(String message) {
-                                    dialog_loading.hide();
-
-                                }
-
-                                @Override
-                                public void onResponese(String response) {
-                                    dialog_loading.hide();
-                                    try{
-                                        JSONObject respon=new JSONObject(response);
-                                        if(respon.getString("status").equals("1")){
-                                            setResult(RESULT_OK);
-                                           finish();
-
-                                        }
-                                        else{
-
-                                        }
-                                    }
-                                    catch (JSONException joe){
-                                        Log.i("ez",joe.getMessage());
-
-                                    }
-                                }
-
-                                @Override
-                                public void onNoConnection(String message) {
-                                    dialog_loading.hide();
-
-                                }
-
-                                @Override
-                                public void OnServerError(String message) {
-                                    dialog_loading.hide();
-                                }
-
-                                @Override
-                                public void OnTimeOut() {
-                                    dialog_loading.hide();
-                                }
-                            });
-                        } else {
-                            // Handle error -> task.getException();
-                            Log.i("ez", task.getException().getMessage());
-                        }
-
-                    }
-                });
 
             }
         });
@@ -264,5 +214,71 @@ public class ProfilActivity extends KuberlayarDilautan {
 
 
 
+    }
+
+    public void updateuser(){
+        currentUser.getIdToken(true).addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
+            @Override
+            public void onComplete(@NonNull Task<GetTokenResult> task) {
+                if (task.isSuccessful()) {
+                    dialog_loading.show();
+                    String idToken = task.getResult().getToken();
+
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("idtoken", idToken);
+                    params.put("no_telp",edt_no_telp.getText().toString());
+                    params.put("tanggal_lahir",edt_tanggal_lahir.getText().toString());
+                    params.put("username",edt_username.getText().toString());
+
+                    service_connector.sendpostrequest(ProfilActivity.this, "setprofil", params, new Service_Connector.VolleyResponseListener_v3() {
+                        @Override
+                        public void onError(String message) {
+                            dialog_loading.hide();
+
+                        }
+
+                        @Override
+                        public void onResponese(String response) {
+                            dialog_loading.hide();
+                            try{
+                                JSONObject respon=new JSONObject(response);
+                                if(respon.getString("status").equals("1")){
+                                    setResult(RESULT_OK);
+                                    finish();
+
+                                }
+                                else{
+
+                                }
+                            }
+                            catch (JSONException joe){
+                                Log.i("ez",joe.getMessage());
+
+                            }
+                        }
+
+                        @Override
+                        public void onNoConnection(String message) {
+                            dialog_loading.hide();
+
+                        }
+
+                        @Override
+                        public void OnServerError(String message) {
+                            dialog_loading.hide();
+                        }
+
+                        @Override
+                        public void OnTimeOut() {
+                            dialog_loading.hide();
+                        }
+                    });
+                } else {
+                    // Handle error -> task.getException();
+                    Log.i("ez", task.getException().getMessage());
+                }
+
+            }
+        });
     }
 }

@@ -172,12 +172,12 @@
         "source": "E:\\gradlecache\\caches\\transforms-2\\files-2.1\\070ce8246cd2137dcc4a9ab0a163dd58\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
-        "merged": "D:\\proj\\AyamPakUsu\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
-        "source": "E:\\gradlecache\\caches\\transforms-2\\files-2.1\\070ce8246cd2137dcc4a9ab0a163dd58\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
-    },
-    {
         "merged": "D:\\proj\\AyamPakUsu\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_seek_thumb.xml.flat",
         "source": "E:\\gradlecache\\caches\\transforms-2\\files-2.1\\070ce8246cd2137dcc4a9ab0a163dd58\\res\\color\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "D:\\proj\\AyamPakUsu\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
+        "source": "E:\\gradlecache\\caches\\transforms-2\\files-2.1\\070ce8246cd2137dcc4a9ab0a163dd58\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "D:\\proj\\AyamPakUsu\\app\\build\\intermediates\\res\\merged\\debug\\xml_pref_general.xml.flat",
@@ -220,12 +220,12 @@
         "source": "E:\\gradlecache\\caches\\transforms-2\\files-2.1\\3ccbc01e916f0f69938f45a89c4e810c\\res\\drawable\\mtrl_snackbar_background.xml"
     },
     {
-        "merged": "D:\\proj\\AyamPakUsu\\app\\build\\intermediates\\res\\merged\\debug\\animator_design_fab_hide_motion_spec.xml.flat",
-        "source": "E:\\gradlecache\\caches\\transforms-2\\files-2.1\\3ccbc01e916f0f69938f45a89c4e810c\\res\\animator\\design_fab_hide_motion_spec.xml"
-    },
-    {
         "merged": "D:\\proj\\AyamPakUsu\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "E:\\gradlecache\\caches\\transforms-2\\files-2.1\\d6a50b6efb0e821033af18bbfb9d27aa\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "D:\\proj\\AyamPakUsu\\app\\build\\intermediates\\res\\merged\\debug\\animator_design_fab_hide_motion_spec.xml.flat",
+        "source": "E:\\gradlecache\\caches\\transforms-2\\files-2.1\\3ccbc01e916f0f69938f45a89c4e810c\\res\\animator\\design_fab_hide_motion_spec.xml"
     },
     {
         "merged": "D:\\proj\\AyamPakUsu\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_singlechoice_material.xml.flat",
@@ -244,12 +244,12 @@
         "source": "E:\\gradlecache\\caches\\transforms-2\\files-2.1\\070ce8246cd2137dcc4a9ab0a163dd58\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
-        "merged": "D:\\proj\\AyamPakUsu\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "D:\\proj\\AyamPakUsu\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
         "merged": "D:\\proj\\AyamPakUsu\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_icon_poin.png.flat",
         "source": "D:\\proj\\AyamPakUsu\\app\\src\\main\\res\\drawable-xxhdpi\\icon_poin.png"
+    },
+    {
+        "merged": "D:\\proj\\AyamPakUsu\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\proj\\AyamPakUsu\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "D:\\proj\\AyamPakUsu\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_actionbar_action_voucher.xml.flat",
