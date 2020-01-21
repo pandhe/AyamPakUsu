@@ -6,12 +6,11 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-         android:layout_width="match_parent"
+        android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/colorPrimary"
 
-        android:theme="@style/MyToolbar"
-        >
+        android:theme="@style/MyToolbar">
 
         <TextView
             android:id="@+id/txtbar"
